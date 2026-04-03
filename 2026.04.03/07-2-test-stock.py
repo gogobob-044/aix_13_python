@@ -14,4 +14,3 @@ def get_stock():
     print(stock)
 
 get_stock()
-print("end")
