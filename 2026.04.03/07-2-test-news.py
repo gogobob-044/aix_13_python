@@ -7,7 +7,7 @@ def get_news():
     target = request.urlopen(url)
     soup = BeautifulSoup(target, "html.parser")
 
-    tag = "li.rl_item.rl_txt" #부모 자식을 보가며 클래스 찾기
+    tag = "li.rl_item .rl_txt" #부모 자식을 보가며 클래스 찾기
     news = soup.select(tag)
     for t in news:
         title = t.get_text()
